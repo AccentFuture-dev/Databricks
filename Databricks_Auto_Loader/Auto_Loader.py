@@ -1,6 +1,5 @@
 from pyspark.sql.functions import current_timestamp
 from pyspark.sql.types import StructType, StructField, StringType, DoubleType
-
 # Define paths
 source_path = "/mnt/source-data/"
 checkpoint_path = "/mnt/checkpoint-data/"  # Update or clean up this directory as needed
