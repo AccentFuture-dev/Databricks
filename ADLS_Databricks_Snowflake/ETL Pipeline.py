@@ -1,8 +1,7 @@
 # Mount ADLS to Databricks
-
 configs = {
     "fs.azure.account.key.developmentrawdata.blob.core.windows.net": 
-"UWXic3OBQFiR3QSl2tDzG8tXleE4N3p0Ug2313fsqfasfqfqerqe311ZNA=="
+"UWXic3OBQFiR3QSl2tDzG8tX3p0Ug2313fsqfasfqfqerqe311ZNA=="
 }
 
 dbutils.fs.mount(
@@ -60,8 +59,7 @@ transformed_data.write \
 
 # COMMAND ----------
 
-transformed_data.write.format("delta").mode("overwrite")
-.save("/mnt/delta/processed_data")
+transformed_data.write.format("delta").mode("overwrite").save("/mnt/delta/processed_data")
 
 # COMMAND ----------
 
