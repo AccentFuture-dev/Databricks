@@ -12,8 +12,6 @@ KAFKA_API_KEY = "RCAHBFUWDKXZwtwtwtwr3JOR"
 KAFKA_API_SECRET = "vpwg0/46V6aT3QG8x5fretn5oxtHssgsgsffgsn67TbEWNjldzI8iQOsQk3+El6ie9"
 TOPICS = ["Policy-details_v1", "Claims", "Customer-v1", "Payments"]
 
-
-
 conf = {
     'bootstrap.servers': KAFKA_BROKER,
     'security.protocol': 'SASL_SSL',
