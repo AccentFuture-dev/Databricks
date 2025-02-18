@@ -7,9 +7,9 @@ from faker import Faker
 # Initialize Faker for generating sample data
 fake = Faker()
 
-KAFKA_BROKER = "pk131c-41mxj.uksouth.azure.confluent.cloud"
-KAFKA_API_KEY = "RCAHBFUWDKXZwtwtwtwr3JOR"
-KAFKA_API_SECRET = "vpwg0/46V6aT3QG8x5fretn5oxtHssgsgsffgsn67TbEWNjldzI8iQOsQk3+El6ie9"
+KAFKA_BROKER = "xxxxx-yyyyy.uksouth.azure.confluent.cloud"
+KAFKA_API_KEY = "xxxxxxxxxx"
+KAFKA_API_SECRET = "vxxxxxxxx"
 TOPICS = ["Policy-details_v1", "Claims", "Customer-v1", "Payments"]
 
 conf = {
@@ -73,12 +73,12 @@ def produce_messages():
             data = data_generators[topic]()  # Generate random data
             message = json.dumps(data)  # Convert to JSON
             producer.produce(topic, key=str(data.get("id", "")), value=message)
-            print(f"✅ Sent to {topic}: {message}")
+            print(f"Sent to {topic}: {message}")
 
         producer.flush()  # Ensure messages are sent
         time.sleep(2)  # Wait for 2 seconds before sending more data
 
 # Start producing messages
 if __name__ == "__main__":
-    print("🚀 Starting Kafka producer...")
+    print("Starting Kafka producer...")
     produce_messages()
